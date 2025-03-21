@@ -1,6 +1,12 @@
+import sys
+
+
 def main():
-    n = int(input())
-    m = int(input())
+    if len(sys.argv) == 3:
+        n = int(sys.argv[1])
+        m = int(sys.argv[2])
+    else:
+        n, m = map(int, input().split())
 
     current_step = 1
 

@@ -1,6 +1,13 @@
+import sys
+
+
 def main():
-    circle_file = str(input())
-    dots_file = str(input())
+    if len(sys.argv) == 3:
+        circle_file = str(sys.argv[1])
+        dots_file = str(sys.argv[2])
+    else:
+        circle_file = str(input())
+        dots_file = str(input())
 
     with open(circle_file, "r") as cf:
         x_circle, y_circle = map(int, cf.readline().split())
